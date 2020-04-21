@@ -35,6 +35,7 @@ signals()
 signal()
 {
 # Syntax:
+#		 signal --say <TEXT>
 #
 		if [ "${1}" = "--say" ]
 		then

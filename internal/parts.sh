@@ -32,7 +32,9 @@ parts()
 
 runner() # daemonizes engine's component's internal functions
 {
-# Syntax: runner <FUNCTION>
+# Syntax:
+#		 runner <FUNCTION>
+#
 
 	# Loop execution pattern:
 	#
@@ -102,7 +104,8 @@ runner() # daemonizes engine's component's internal functions
 
 parser()
 {
-# Syntax: parser <DIRECTORY> <SEARCH PHRASE> <MATCH PHRASE>
+# Syntax:
+#		 parser <DIRECTORY> <SEARCH PHRASE> <MATCH PHRASE>
 #
 		if [ "${1}" = "--settings" ]
 		then
@@ -135,6 +138,7 @@ parser()
 enlister()
 {
 # Syntax:
+#		 enlister
 #
 		if [ -n ${1} ]
 		then

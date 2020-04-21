@@ -34,6 +34,8 @@ flow()
 gate()
 {
 # Syntax:
+#		 gate
+#
 	    local DIR="${1}"
 	    local CMD="${2}"
 
@@ -54,6 +56,8 @@ gate()
 registry()	# Returns the truth value of the correct parameter query for
 {
 # Syntax:
+#		 registry
+#
 		local LEDGER="${___RUN_LED___}/${2}"
 
 		if [ "${1}" = "--locked" ]

@@ -158,6 +158,30 @@ setup() #
 }
 
 #--------------------------------------------------------------------------------------------------
+index() #
+{       #
+        for RESOURCE in ${REBUNTU}/internal/*
+        do
+            while read line
+            do
+                if [ "${line}" = "# Syntax:" ]
+                then
+                    local include=True
+                elif echo "${line}" | grep -qo "^#$"
+                then
+                    local include=False
+                fi
+
+                if [ "${include}" = "True" ]
+                then
+                    echo "${line}" >> ${REBUNTU}/system/index/syntax.txt
+                fi
+
+            done < ${RESOURCE}
+        done
+}
+
+#--------------------------------------------------------------------------------------------------
 fuse()  # core's exam function counterpart
 {       # responsible for the runtime integrality
 
@@ -267,7 +291,7 @@ then
             then
                 if [ "$(activity --running admin)" != "True" ]
                 then
-                    init meld fuse frame guard chain setup
+                    init meld fuse frame guard chain setup index
 
                     if [ "$(activity --running admin)" = "True" ]
                     then

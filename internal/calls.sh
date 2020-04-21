@@ -33,6 +33,7 @@ calls()
 getter()
 {
 # Syntax:
+#		 getter <VARIABLE> <FILE>
 #
 	    if [ -n "${1}" ]
 	    then
@@ -64,6 +65,7 @@ getter()
 setter()
 {
 # Syntax:
+#		 setter <VARIABLE> <VALUE> <FILE>
 #
 	    if [ -n "${1}" ]
 	    then

@@ -22,7 +22,6 @@ objects()
 # Syntax:
 #		 objects --imported
 #
-			___;
 
 			if [ "${1}" = "--imported" ]
 			then
@@ -35,6 +34,7 @@ objects()
 prompt()
 {
 # Syntax:
+#		 prompt
 #
         if [ "${1}" = "--yn" ]
         then
@@ -111,6 +111,7 @@ prompt()
 box()
 {
 # Syntax:
+#		 box
 #
 	    if [ "${1}" = "--yesno" ];
 		then
@@ -243,7 +244,6 @@ channel()
 #        channel --output
 #        channel --check
 #
-        ___;
 
         w_()
         {
@@ -425,7 +425,7 @@ header()
 # 		 header --declare
 #		 header --check
 # 		 header --print
-
+#
 
 		if [[ "${BASH_SOURCE[0]}" != "${0}" ]]
 		then
@@ -451,6 +451,7 @@ header()
 separator()
 {
 # Syntax:
+#		 separator
 #
 			if [ "${1}" = "--red" ]
 			then
@@ -467,15 +468,14 @@ separator()
 }
 
 #--------------------------------------------------------------------------------------------------
-___()
-{
-            if REBUNTU="$(l1=$(grep "REBUNTU_LOCATION=" /etc/rebuntu.conf);
-                          l2=${l1##*=}; echo "${l2}")";
-            then
-                [ -e ${REBUNTU}/sources/definitions.sh ] \
-                && . ${REBUNTU}/sources/definitions.sh;
-            fi
-}
+
+if REBUNTU="$(l1=$(grep "REBUNTU_LOCATION=" /etc/rebuntu.conf);
+              l2=${l1##*=}; echo "${l2}")";
+then
+    [ -e ${REBUNTU}/sources/definitions.sh ] \
+    && . ${REBUNTU}/sources/definitions.sh;
+fi
+
 #--------------------------------------------------------------------------------------------------
 
 #-------------------------------------------------------------------------------------------------#

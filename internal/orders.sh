@@ -22,7 +22,6 @@ orders()
 # Syntax:
 #		 orders --imported
 #
-			___;
 
 			if [ "${1}" = "--imported" ]
 			then
@@ -188,7 +187,7 @@ install()
 uninstall()
 {
 # Syntax:
-#
+#		 uninstall
 #
 		for i in $@
 		do

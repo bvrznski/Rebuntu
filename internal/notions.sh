@@ -33,6 +33,7 @@ notions()
 stamp()
 {
 # Syntax:
+#		 stamp
 #
 		if [ "${1}" = "--check" ]
 		then
